@@ -38,7 +38,7 @@ Place this file in the `CassiePy/modules/` directory
 
 Import your files into `main.py`:
 
-```
+```python
 from modules import example1
 from modules import example2
 ```
