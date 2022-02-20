@@ -1,10 +1,10 @@
 # CassiePy
-A command line tool for managing and using python modules
+A command line tool for managing and running python scripts
 
-### Requirements
+## Requirements
 Needs a terminal that supports ansii text  - Windows Terminal should work great, untested on linux or OSX
 
-### Installation
+## Installation
 ##### *For now just download the code, might get published to pypi later :)*
 Clone this repository:
 
@@ -18,8 +18,20 @@ Run the program!
 
   `python main.py`
 
+## Usage
+After installing, simple run the script
 
-### Adding Modules
+`python main.py`
+
+This will start the program!
+After it loads, it will prompt you to enter a command. Don't know what to type?  
+Try the `help` command!
+It prints out all the commands and a short description.
+
+Still not getting a command?  
+Do `help <command>` to get more detailed info
+
+## Adding Modules
 If you want to add your own modules, you can!
 You just have to edit  `main.py` until i implement a dynamic module
 loading system.
