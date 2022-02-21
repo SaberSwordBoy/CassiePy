@@ -1,10 +1,11 @@
+import sys
+import multiprocessing
+import threading
 from time import sleep
 import os
 import itertools
 from pyfiglet import figlet_format
 
-from modules import example1
-from modules import example2
 
 from rich.console import Console
 from rich.table import Table
@@ -13,6 +14,16 @@ console = Console()
 
 VERSION = "0.1 Development"
 
+def load_module(module):
+    module_path = "modules.%s" % module
+    #module_path = module
+
+    if module_path in sys.modules:
+        return sys.modules[module_path]
+
+    return __import__(module_path, fromlist=[module])
+
+
 commands = {
     "help": ["show this message", "help <args>"],
     "about": ["about CassiePy", "about"],
@@ -20,10 +31,17 @@ commands = {
     "modules": ['use and run modules', 'modules <args>']
 }
 
-modules = {
-    'example1': [example1.NAME, example1.DESCRIPTION, example1],
-    'example2': [example2.NAME, example2.DESCRIPTION, example2]
-}
+modules = {}
+
+for r, d, f, in os.walk("./modules"):
+    for file in f:
+        if '__' in file:
+            continue
+        elif 'cpython' in file:
+            continue
+        else:
+            module = load_module(file.replace(".py", ""))
+            modules.update({file: [module.NAME, module.DESCRIPTION, module]})
 
 def usage(*args):
     console.print("[green][INFO][/green] [magenta bold] == COMMANDS AND USAGE == [/magenta bold]")
@@ -69,13 +87,23 @@ def module(*args):
     running = True
     while running:
         prompt = inputPrompt("moduleSelector@CassiePy")
-        if prompt == '99':
-            return
-        elif prompt == '0':
-            example1.run()
-        elif prompt == '1':
-            example2.run()
-        else:
+
+        try:
+            prompt = int(prompt)
+
+            if prompt == 99:
+                running = False
+            elif prompt > table_index:
+                print("Not an option dumbass.")
+
+            dict_index = list(modules)
+            name = dict_index[prompt]
+            try:
+                modules[name][2].run()
+            except KeyboardInterrupt:
+                return
+
+        except ValueError:
             print(f"[red][ERROR][/red][red dim] '[underline]{prompt}[/underline]' is not a valid option[/red dim]")
 
 def inputPrompt(text):
@@ -130,7 +158,7 @@ def main():
             sleep(1)
 
     print("[green][INFO][/green] [dim]Done loading... Starting up now![/dim]")
-    sleep(0.5)
+    sleep(0.2)
     if platform == 'windows':
         os.system('cls')
     else:
