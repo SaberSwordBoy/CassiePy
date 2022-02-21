@@ -5,7 +5,7 @@ A command line tool for managing and running python scripts
 Needs a terminal that supports ansii text  - Windows Terminal should work great, tested on Kali Linux and Parrot OS. Untested on Mac or other linux distros, but should work fine.
 
 ## Installation
-##### *For now just download the code, might get published to pypi later :)*
+##### *For now just download the code, might get published somewhere later*
 Clone this repository:
 
   `$git clone https://github.com/SaberSwordBoy/CassiePy`  
@@ -56,4 +56,14 @@ And done! Your modules should show up when running the `modules` command in Cass
 Start a pull request on this repository! The only change you should need to make is adding your module to the modules directory.  
 I will review the module, test it, and if it works, it will get added!
 
-Thanks for contributing!
+## Contributing
+
+Feel free to make edits to my code! (it's probably bad anyway)
+
+I'm always open to criticism as well. Let us know if you think we should do something different!
+
+
+# Thanks for contributing!
+
+
+###### *this file is now exactly 69 lines*
