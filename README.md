@@ -32,6 +32,9 @@ Do `help <command>` to get more detailed info
 ## Adding Modules
 If you want to add your own modules, you can!
 
+NOTE: *modules currently do not support command line arguments from CassiePy, but that may be coming soon*  
+*if you want your module to use arguments, ask for them with the `input()` function built into python*
+
 All you need to do is have a .py file with some specific variables and functions.  
 To get started, follow the below instructions!  
 After you put your module in, CassiePy should load it!
@@ -39,30 +42,13 @@ After you put your module in, CassiePy should load it!
 First make your module: 
 To see what a module should look like, check out `CassiePy/modules/example1.py`
 
-Modules should have a short but descriptive name, like 'netscraper' or 'portscanner'
+Modules should have a short but descriptive name, like 'netscraper' or 'texttospeech'
 
 Each module needs a `NAME` and `DESCRIPTION` variable.
 
 It also needs a `run()` function, for executing the code from the CassiePy CLI
 
-Place this file in the `CassiePy/modules/` directory
-
-Import your files into `main.py`:
-
-```python
-from modules import example1
-from modules import example2
-```
-
-
-In `main.py`, there is a `modules` dictionary:
-```python
-modules = {
-    'example1': [example1.NAME, example1.DESCRIPTION, example1],
-    'example2': [example2.NAME, example2.DESCRIPTION, example2]
-}
-```
-Append your modules, copying the examples above and replacing the name with the name of your module. 
+Place this file in the `CassiePy/modules/` directory 
 
 And done! Your modules should show up when running the `modules` command in CassiePy
 
