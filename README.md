@@ -31,9 +31,10 @@ Do `help <command>` to get more detailed info
 
 ## Adding Modules
 If you want to add your own modules, you can!
-You just have to edit  `main.py` until i implement a dynamic module
-loading system.
 
+All you need to do is have a .py file with some specific variables and functions.  
+To get started, follow the below instructions!  
+After you put your module in, CassiePy should load it!
 
 First make your module: 
 To see what a module should look like, check out `CassiePy/modules/example1.py`
@@ -64,5 +65,9 @@ modules = {
 Append your modules, copying the examples above and replacing the name with the name of your module. 
 
 And done! Your modules should show up when running the `modules` command in CassiePy
+
+### Want to publish your module?
+Start a pull request on this repository! The only change you should need to make is adding your module to the modules directory.  
+I will review the module, test it, and if it works, it will get added!
 
 Thanks for contributing!
