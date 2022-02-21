@@ -2,7 +2,7 @@
 A command line tool for managing and running python scripts
 
 ## Requirements
-Needs a terminal that supports ansii text  - Windows Terminal should work great, untested on linux or OSX
+Needs a terminal that supports ansii text  - Windows Terminal should work great, works on Kali Linux as well. Untested on OS-X / Mac OS
 
 ## Installation
 ##### *For now just download the code, might get published to pypi later :)*
