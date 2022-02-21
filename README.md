@@ -8,7 +8,8 @@ Needs a terminal that supports ansii text  - Windows Terminal should work great,
 ##### *For now just download the code, might get published to pypi later :)*
 Clone this repository:
 
-  `git clone https://github.com/SaberSwordBoy/CassiePy`
+  `git clone https://github.com/SaberSwordBoy/CassiePy`  
+  `cd CassiePy`
 
 Install Requirements:
 
