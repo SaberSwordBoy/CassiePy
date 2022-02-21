@@ -8,21 +8,18 @@ Needs a terminal that supports ansii text  - Windows Terminal should work great,
 ##### *For now just download the code, might get published to pypi later :)*
 Clone this repository:
 
-  `git clone https://github.com/SaberSwordBoy/CassiePy`  
-  `cd CassiePy`
+  `$git clone https://github.com/SaberSwordBoy/CassiePy`  
+  `$cd CassiePy`
 
 Install Requirements:
 
-  `pip install -r requirements.txt`
-
-Run the program!
-
-  `python main.py`
-
+  `$pip install -r requirements.txt`
+  
+  
 ## Usage
-After installing, simple run the script
+After installing, simply run the script
 
-`python main.py`
+`$python main.py`
 
 This will start the program!
 After it loads, it will prompt you to enter a command. Don't know what to type?  
